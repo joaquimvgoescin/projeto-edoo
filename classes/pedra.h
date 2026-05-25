@@ -1,6 +1,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <string>
+#include "variaveis_constantes.h"
 #ifndef _pedra_h_
 #define _pedra_h_
 
@@ -9,7 +10,7 @@ class pedra {
 
     int x_centro;
     int y_centro;
-    float tamanho = 5;
+    float tamanho = tamanho_bloco/2;
     float x_esquerda;
     float x_direita;
     float ycima;

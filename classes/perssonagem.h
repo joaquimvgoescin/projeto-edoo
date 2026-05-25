@@ -25,4 +25,8 @@ class perssonagem {
         int x[3] = {minerioferro, minerioprata, minerioouro};
         return x;
     }
+
+    void mover_cima(){
+        
+    }
 };
