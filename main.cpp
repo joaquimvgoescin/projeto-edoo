@@ -9,6 +9,10 @@
 #include "classes/pedra.h"
 #include "variaveis_constantes.h"
 #include "classes/perssonagem.h"
+// para pausar
+
+#include <thread>
+#include <chrono>
 
 int main(){
     //gera seed
@@ -85,6 +89,7 @@ int main(){
             }
 
         }
+        std :: this_thread :: sleep_for(std :: chrono:: milliseconds(16));
     }
 
 
