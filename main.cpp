@@ -21,7 +21,7 @@ int main(){
         mapa.push_back(vector_vazio_vector);
 
         for (int j = 1; j <= dimencao_mapax; j++){
-            int numero_aleatorio = std::rand() % 7 ;
+            int numero_aleatorio = (std::rand() * i * j) % 7 ;
             if (numero_aleatorio == 1){
                 mapa[i - 1].push_back(new cobre(j * tamanho_bloco - 5,i * tamanho_bloco - 5));
             }
