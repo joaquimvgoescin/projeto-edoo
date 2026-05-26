@@ -8,8 +8,10 @@
 #include "classes/terra.h"
 #include "classes/pedra.h"
 #include "variaveis_constantes.h"
+#include "classes/perssonagem.h"
 
 int main(){
+    perssonagem po();
     //gera seed
     std::srand(std::time(nullptr));
 

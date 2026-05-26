@@ -1,6 +1,6 @@
-#include <cstdlib>
-#include <iostream>
-#include <ctime>
+#include <vector>
+#include "pedra.h"
+
 class perssonagem {
     private:
     int posicaox;
@@ -26,7 +26,7 @@ class perssonagem {
         return x;
     }
 
-    void mover_cima(){
+    void mover_cima(std::vector<std::vector<pedra>>){
         
     }
 };
