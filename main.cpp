@@ -23,19 +23,19 @@ int main(){
         for (int j = 1; j <= dimencao_mapax; j++){
             int numero_aleatorio = std::rand() % 10 ;
             if (numero_aleatorio == 1){
-                mapa[i - 1].push_back(new pedra(ouro(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
+                mapa[i - 1].push_back(new cobre(j * tamanho_bloco - 5,i * tamanho_bloco - 5));
             }
 
             else if (numero_aleatorio == 2){
-                mapa[i - 1].push_back(new pedra(prata(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
+                mapa[i - 1].push_back(new prata(j * tamanho_bloco - 5,i * tamanho_bloco - 5));
             }
 
-            else if (numero_aleatorio == 2){
-                mapa[i - 1].push_back(new pedra(cobre(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
+            else if (numero_aleatorio == 3){
+                mapa[i - 1].push_back(new ouro(j * tamanho_bloco - 5,i * tamanho_bloco - 5));
             }
 
             else{
-                mapa[i - 1].push_back(new pedra(terra(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
+                mapa[i - 1].push_back(new terra(j * tamanho_bloco - 5,i * tamanho_bloco - 5));
             }
             
             

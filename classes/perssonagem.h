@@ -30,11 +30,10 @@ class perssonagem {
 
     void minerar(std::vector<std::vector<pedra*>> &meu_mapa, int i, int j){
         if((*(meu_mapa[i][j])).dano()){
-            std::string minerio_coletado = (*meu_mapa[i][j]).get_tipo();
-            if(minerio_coletado == "cobre"){this -> mineriocobre += 1;}
-            if(minerio_coletado == "prata"){this -> minerioprata += 1;}
-            if(minerio_coletado == "cobre"){this -> minerioouro += 1;}
-
+            std::string minerio_coletadoA = (*meu_mapa[i][j]).get_tipo();
+            if(minerio_coletadoA == "cobre"){this -> mineriocobre += 1;}  
+            if(minerio_coletadoA == "prata"){this -> minerioprata += 1;}
+            if(minerio_coletadoA == "ouro"){this -> minerioouro += 1;}
             
             meu_mapa[i][j] = new pedra(vazio());
         }
@@ -45,6 +44,10 @@ class perssonagem {
     perssonagem(int x, int y){
         this -> posicaox = x;
         this -> posicaoy = y;
+        mineriocobre = 0;
+        minerioprata = 0;
+        minerioouro = 0;
+        delay = 0;
     }
     int get_x(){
         return posicaox;
