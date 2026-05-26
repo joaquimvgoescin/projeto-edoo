@@ -14,16 +14,17 @@ class perssonagem {
     int delay;
 
     int* caminho_bloqueado(const std::vector<std::vector<pedra*>> &meu_mapa, int novo_x, int novo_y){
-        for(int i = 1; i <= dimencao_mapay; i++){
-            for(int j = 1; j <= dimencao_mapax; j++){
+        int saida[2] = {-1,-1};
+        for(int i = 0; i < dimencao_mapay; i++){
+            for(int j = 0; j < dimencao_mapax; j++){
 
                 if((*meu_mapa[i][j]).dentro(novo_x,novo_y)){
-                    int saida[2] = {i,j};
+                    saida[0] = i;
+                    saida[1] = j;
                     return saida;
                 }
             }
         }
-        int saida[1] = {0};
         return saida;
     }
 
@@ -58,10 +59,10 @@ class perssonagem {
     }
 
     void mover_cima(std::vector<std::vector<pedra*>> &meu_mapa){
-        if(delay <= 0 && posicaoy < dimencao_mapay){
+        if(delay <= 0 && posicaoy < dimencao_mapay * tamanho_bloco){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox, this -> posicaoy + this -> perssonagem_velocidade);
             
-            if(resultado[0] == 0){
+            if(resultado[0] == -1){
                 this -> posicaoy += this -> perssonagem_velocidade;
             }
 
@@ -77,7 +78,7 @@ class perssonagem {
         if(delay <= 0 && posicaoy > 0){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox, this -> posicaoy - this -> perssonagem_velocidade);
             
-            if(resultado[0] == 0){
+            if(resultado[0] == -1){
                 this -> posicaoy -= this -> perssonagem_velocidade;
             }
 
@@ -89,10 +90,10 @@ class perssonagem {
     }
 
     void mover_direita(std::vector<std::vector<pedra*>> &meu_mapa){
-        if(delay <= 0 && posicaox < dimencao_mapax){
+        if(delay <= 0 && posicaox < dimencao_mapax * tamanho_bloco){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox + this -> perssonagem_velocidade, this -> posicaoy);
             
-            if(resultado[0] == 0){
+            if(resultado[0] == -1){
                 this -> posicaox += this -> perssonagem_velocidade;
             }
 
@@ -107,7 +108,7 @@ class perssonagem {
         if(delay <= 0 && posicaox > 0){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox - this -> perssonagem_velocidade, this -> posicaoy);
             
-            if(resultado[0] == 0){
+            if(resultado[0] == -1){
                 this -> posicaox -= this -> perssonagem_velocidade;
             }
 

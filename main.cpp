@@ -23,19 +23,19 @@ int main(){
         for (int j = 1; j <= dimencao_mapax; j++){
             int numero_aleatorio = std::rand() % 10 ;
             if (numero_aleatorio == 1){
-                mapa[i - 1].push_back(new pedra(ouro(j * tamanho_bloco,i * tamanho_bloco)));
+                mapa[i - 1].push_back(new pedra(ouro(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
             }
 
             else if (numero_aleatorio == 2){
-                mapa[i - 1].push_back(new pedra(prata(j * tamanho_bloco,i * tamanho_bloco)));
+                mapa[i - 1].push_back(new pedra(prata(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
             }
 
             else if (numero_aleatorio == 2){
-                mapa[i - 1].push_back(new pedra(cobre(j * tamanho_bloco,i * tamanho_bloco)));
+                mapa[i - 1].push_back(new pedra(cobre(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
             }
 
             else{
-                mapa[i - 1].push_back(new pedra(terra(j * tamanho_bloco,i * tamanho_bloco)));
+                mapa[i - 1].push_back(new pedra(terra(j * tamanho_bloco - 5,i * tamanho_bloco - 5)));
             }
             
             
@@ -50,7 +50,7 @@ int main(){
     while(true){
 
         bool botao_a = false;
-        bool botao_d = false;
+        bool botao_d = true;
         bool botao_w = false;
         bool botao_s = false;
         bool botao_esquerda = false;

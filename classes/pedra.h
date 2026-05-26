@@ -10,7 +10,7 @@ class pedra {
 
     int x_centro;
     int y_centro;
-    float tamanho = tamanho_bloco/2;
+    float tamanho;
     float x_esquerda;
     float x_direita;
     float ycima;
@@ -22,6 +22,9 @@ class pedra {
 
         this -> x_centro = posicaox;
         this -> y_centro = posicaoy;
+
+
+        tamanho = tamanho_bloco/2;
 
         std:: srand(std::time(nullptr));
         x_esquerda = x_centro - tamanho ;
