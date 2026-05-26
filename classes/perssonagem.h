@@ -52,7 +52,7 @@ class perssonagem {
     }
 
     void mover_cima(std::vector<std::vector<pedra>> &meu_mapa){
-        if(delay <= 0){
+        if(delay <= 0 && posicaoy < dimencao_mapay){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox, this -> posicaoy + this -> perssonagem_velocidade);
             
             if(resultado[0] == 0){
@@ -68,7 +68,7 @@ class perssonagem {
 
 
     void mover_baixo(std::vector<std::vector<pedra>> &meu_mapa){
-        if(delay <= 0){
+        if(delay <= 0 && posicaoy > 0){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox, this -> posicaoy - this -> perssonagem_velocidade);
             
             if(resultado[0] == 0){
@@ -83,7 +83,7 @@ class perssonagem {
     }
 
     void mover_direita(std::vector<std::vector<pedra>> &meu_mapa){
-        if(delay <= 0){
+        if(delay <= 0 && posicaox < dimencao_mapax){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox + this -> perssonagem_velocidade, this -> posicaoy);
             
             if(resultado[0] == 0){
@@ -98,7 +98,7 @@ class perssonagem {
     }
 
     void mover_esquerda(std::vector<std::vector<pedra>> &meu_mapa){
-        if(delay <= 0){
+        if(delay <= 0 && posicaox > 0){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox - this -> perssonagem_velocidade, this -> posicaoy);
             
             if(resultado[0] == 0){
