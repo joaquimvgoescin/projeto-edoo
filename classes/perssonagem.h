@@ -12,6 +12,7 @@ class perssonagem {
     int minerioouro;
     int perssonagem_velocidade = velocidade;
     int delay;
+    const int tempo_delay = 5;
 
     int* caminho_bloqueado(const std::vector<std::vector<pedra*>> &meu_mapa, int novo_x, int novo_y){
         int saida[2] = {-1,-1};
@@ -65,7 +66,8 @@ class perssonagem {
     void mover_cima(std::vector<std::vector<pedra*>> &meu_mapa){
         if(delay <= 0 && posicaoy < dimencao_mapay * tamanho_bloco){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox, this -> posicaoy + this -> perssonagem_velocidade);
-            
+            this -> delay = this -> tempo_delay;
+
             if(resultado[0] == -1){
                 this -> posicaoy += this -> perssonagem_velocidade;
             }
@@ -81,6 +83,7 @@ class perssonagem {
     void mover_baixo(std::vector<std::vector<pedra*>> &meu_mapa){
         if(delay <= 0 && posicaoy > 0){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox, this -> posicaoy - this -> perssonagem_velocidade);
+            this -> delay = this -> tempo_delay;
             
             if(resultado[0] == -1){
                 this -> posicaoy -= this -> perssonagem_velocidade;
@@ -96,7 +99,8 @@ class perssonagem {
     void mover_direita(std::vector<std::vector<pedra*>> &meu_mapa){
         if(delay <= 0 && posicaox < dimencao_mapax * tamanho_bloco){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox + this -> perssonagem_velocidade, this -> posicaoy);
-            
+            this -> delay = this -> tempo_delay;
+
             if(resultado[0] == -1){
                 this -> posicaox += this -> perssonagem_velocidade;
             }
@@ -111,7 +115,8 @@ class perssonagem {
     void mover_esquerda(std::vector<std::vector<pedra*>> &meu_mapa){
         if(delay <= 0 && posicaox > 0){
             int* resultado = caminho_bloqueado(meu_mapa, this -> posicaox - this -> perssonagem_velocidade, this -> posicaoy);
-            
+            this -> delay = this -> tempo_delay;
+
             if(resultado[0] == -1){
                 this -> posicaox -= this -> perssonagem_velocidade;
             }

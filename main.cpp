@@ -89,6 +89,8 @@ int main(){
             }
 
         }
+        perssonagem1.atualizar();
+        perssonagem2.atualizar();
         std :: this_thread :: sleep_for(std :: chrono:: milliseconds(16));
     }
 
