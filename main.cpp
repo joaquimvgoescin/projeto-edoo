@@ -45,7 +45,16 @@ int main(){
     //criar perssonagens
     perssonagem perssonagem1(1,1);
     perssonagem perssonagem2(dimencao_mapax - 1, 1);
+    
 
+    // deleta tiles aonde os perssonagens nacem.
+    delete mapa[0][0];
+    mapa[0][0] = new vazio();
+    delete mapa[0][dimencao_mapax - 1];
+    mapa[0][dimencao_mapax - 1] = new vazio();
+
+
+    
     //inicio
     while(true){
 
