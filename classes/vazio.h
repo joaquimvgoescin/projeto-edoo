@@ -12,7 +12,7 @@ class vazio : public pedra{
         return "vazio";
     }
 
-    bool dentro(int x, int y) const{
+    bool dentro(int x, int y) const override{
         return false;
     }
     ~vazio(){}

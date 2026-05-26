@@ -9,7 +9,7 @@ class terra : public pedra{
         this -> vida = 10;
     }
 
-    std::string get_tipo() const {
+    std::string get_tipo() const override {
         return "terra";
     }
     ~terra(){}

@@ -35,7 +35,7 @@ class pedra {
 
     virtual ~pedra(){};
 
-    bool dentro(int x, int y) const{
+    virtual bool dentro(int x, int y) const{
         if (x >= this -> x_esquerda && x <= this -> x_direita && y >= this -> ybaixo && y <= this -> ycima){
             return true;
         }

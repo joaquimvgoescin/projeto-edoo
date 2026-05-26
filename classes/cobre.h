@@ -9,7 +9,7 @@ class cobre : public pedra{
         this -> vida = 5;
     }
 
-    std::string get_tipo() const {
+    std::string get_tipo() const override {
         return "cobre";
     }
     ~cobre(){}

@@ -49,14 +49,14 @@ class perssonagem {
         minerioouro = 0;
         delay = 0;
     }
-    int get_x(){
+    int get_x() const{
         return posicaox;
     }
 
-    int get_y(){
+    int get_y() const {
         return posicaoy;
     }
-    int* get_minerios(){
+    int* get_minerios() const{
         int x[3] = {mineriocobre, minerioprata, minerioouro};
         return x;
     }
