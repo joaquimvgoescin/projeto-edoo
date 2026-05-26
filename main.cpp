@@ -41,5 +41,43 @@ int main(){
             
         }
     }
+
+    //criar perssonagens
+    perssonagem perssonagem1(1,1);
+    perssonagem perssonagem2(dimencao_mapax - 1, 1);
+
+    //inicio
+    while(true){
+
+        bool botao_a = false;
+        bool botao_d = false;
+        bool botao_w = false;
+        bool botao_s = false;
+        bool botao_esquerda = false;
+        bool botao_direita = false;
+        bool botao_cima = false;
+        bool botao_baixo = false;
+
+        void (perssonagem :: *lista_andar[4])(std::vector<std::vector<pedra*>> &) = {&perssonagem :: mover_baixo, &perssonagem:: mover_cima, &perssonagem :: mover_direita, &perssonagem :: mover_esquerda};
+        bool lista1_bool1[4] = {botao_s, botao_w, botao_d, botao_a};
+        bool lista1_bool2[4] = {botao_baixo, botao_cima, botao_direita, botao_esquerda};
+
+        for(int i = 0; i < 4; i++){
+
+
+            if(lista1_bool1[i]){
+
+                (perssonagem1.*lista_andar[i])(mapa);
+            }
+
+            if(lista1_bool2[i]){
+
+                (perssonagem2.*lista_andar[i])(mapa);
+            }
+
+        }
+    }
+
+
     return 0;
 }
