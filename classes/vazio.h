@@ -15,4 +15,5 @@ class vazio : public pedra{
     bool dentro(int x, int y) const{
         return false;
     }
+    ~vazio(){}
 };

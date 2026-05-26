@@ -35,7 +35,7 @@ class perssonagem {
             if(minerio_coletadoA == "prata"){this -> minerioprata += 1;}
             if(minerio_coletadoA == "ouro"){this -> minerioouro += 1;}
             
-            meu_mapa[i][j] = new pedra(vazio());
+            meu_mapa[i][j] = new vazio();
         }
     }
 

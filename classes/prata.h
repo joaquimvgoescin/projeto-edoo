@@ -12,4 +12,5 @@ class prata : public pedra{
     std::string get_tipo() const {
         return "patra";
     }
+    ~prata(){}
 };

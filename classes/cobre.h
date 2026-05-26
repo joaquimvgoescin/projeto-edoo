@@ -12,4 +12,5 @@ class cobre : public pedra{
     std::string get_tipo() const {
         return "cobre";
     }
+    ~cobre(){}
 };

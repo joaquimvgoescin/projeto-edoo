@@ -12,4 +12,5 @@ class terra : public pedra{
     std::string get_tipo() const {
         return "terra";
     }
+    ~terra(){}
 };

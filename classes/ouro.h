@@ -11,4 +11,5 @@ class ouro : public pedra{
     std::string get_tipo() const {
         return "ouro";
     }
+    ~ouro(){}
 };

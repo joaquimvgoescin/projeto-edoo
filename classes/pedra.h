@@ -50,7 +50,7 @@ class pedra {
         return false;
     }
 
-    virtual std::string get_tipo() const{return "nada";};
+    virtual std::string get_tipo() const = 0;
 };
 
 #endif
