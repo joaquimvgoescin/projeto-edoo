@@ -2,9 +2,10 @@
 #define _variaveis_globais_const_
 
 
-int const tamanho_bloco = 10;
-int const dimencao_mapax = 10;
-int const dimencao_mapay = 10;
+const int tamanho_bloco = 10;
+const int dimencao_mapax = 10;
+const int dimencao_mapay = 10;
+const int velocidade = 1;
 
 
 #endif

@@ -11,7 +11,6 @@
 #include "classes/perssonagem.h"
 
 int main(){
-    perssonagem po();
     //gera seed
     std::srand(std::time(nullptr));
 
